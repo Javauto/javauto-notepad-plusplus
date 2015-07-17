@@ -3,6 +3,7 @@
 Syntax highlighting and auto completion for [Javauto](http://javauto.org/) files in [Notepad++](https://notepad-plus-plus.org/) 
 
 ![notepad](http://htejera.ukelelestudio.com/adbutil/images/notepad.png)
+
 The color scheme is built for the default theme (white background).
 
 ## Description
