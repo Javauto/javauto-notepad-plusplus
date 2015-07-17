@@ -17,14 +17,14 @@ There are 2 Notepad++ add-on features in this repository:
 * Make sure you have Notepad++ installed with the option to use %APPDATA% (which is the default).
 * Download the [userDefineLang_Javauto.xml](https://github.com/Javauto/javautoNotepad-plusplus/blob/master/userDefineLang_Javauto.xml) FILE
 * Start Notepad++ and open the "Define your language..." (Under the "Language" tab)
-* Click "import" and select the userDefineLang_Javauto.xml file.
+* Click "import" and select the **userDefineLang_Javauto.xml** file.
 * Restart Notepad++
 * Open **.javauto** file and you should now have syntax highlighting.
 
 ## Auto completion 
 * Download the [javauto.xml](https://github.com/Javauto/javautoNotepad-plusplus/blob/master/javauto.xml)  file
 * Cose all instances of Notepad++
-* The AutoComplete files are located in the "plugins\APIs" folder, to be found in the Notepad++ Install Folder, most often C:\Program Files\Notepad++. Copy the javauto.xml file into this folder.
+* The AutoComplete files are located in the **plugins\APIs** folder, to be found in the Notepad++ Install Folder, most often **C:\Program Files\Notepad++**. Copy the **javauto.xml** file into this folder.
 * Restart Notepad++
    
 ## Notes
