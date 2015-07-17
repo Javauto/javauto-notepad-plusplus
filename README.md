@@ -2,6 +2,8 @@
 
 Syntax highlighting and auto completion for [Javauto](http://javauto.org/) files in [Notepad++](https://notepad-plus-plus.org/) 
 
+![notepad](http://htejera.ukelelestudio.com/adbutil/images/notepad.png)
+
 ## Description
 
 There are 2 Notepad++ add-on features in this repository:
