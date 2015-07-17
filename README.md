@@ -3,6 +3,7 @@
 Syntax highlighting and auto completion for [Javauto](http://javauto.org/) files in [Notepad++](https://notepad-plus-plus.org/) 
 
 ![notepad](http://htejera.ukelelestudio.com/adbutil/images/notepad.png)
+The color scheme is built for the default theme (white background).
 
 ## Description
 
@@ -29,9 +30,8 @@ There are 2 Notepad++ add-on features in this repository:
 * The AutoComplete files are located in the **plugins\APIs** folder, to be found in the Notepad++ Install Folder, most often **C:\Program Files\Notepad++**. Copy the **javauto.xml** file into this folder.
 * Restart Notepad++
    
-## Notes
 
-The color scheme is built for the default theme (white background).
+
 
 
  
