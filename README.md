@@ -23,7 +23,7 @@ There are 2 Notepad++ add-on features in this repository:
 
 ## Auto completion 
 * Download the [javauto.xml](https://github.com/Javauto/javautoNotepad-plusplus/blob/master/javauto.xml)  file
-* Cose all instances of Notepad++
+* Close all instances of Notepad++
 * The AutoComplete files are located in the **plugins\APIs** folder, to be found in the Notepad++ Install Folder, most often **C:\Program Files\Notepad++**. Copy the **javauto.xml** file into this folder.
 * Restart Notepad++
    
