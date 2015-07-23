@@ -8,7 +8,7 @@ The color scheme is built for the default theme (white background).
 
 ## Description
 
-There are 2 Notepad++ add-on features in this repository:
+There are 2 [Notepad++](https://notepad-plus-plus.org/) add-on features in this repository:
 
 * An XML file that gives you syntax highlighting/coloring for **.javauto** files and brings you ability to fold code structure. [userDefineLang_Javauto.xml](https://github.com/Javauto/javautoNotepad-plusplus/blob/master/userDefineLang_Javauto.xml)
 
