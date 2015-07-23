@@ -1,0 +1,6 @@
+
+script: 
+ - "/usr/bin/xmllint $REPOSITORY_DIR/userDefineLang_Javauto.xml"
+ - "/usr/bin/xmllint $REPOSITORY_DIR/javauto.xml"
+ 
+sudo: false
