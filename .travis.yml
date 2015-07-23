@@ -4,3 +4,11 @@ script:
  - "/usr/bin/xmllint /home/travis/build/Javauto/javauto-notepad-plusplus/javauto.xml"
  
 sudo: false
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/56a42f65b462c237bbe9
+    on_success: change
+    on_failure: always
+    on_start: false
