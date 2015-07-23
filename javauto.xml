@@ -21,6 +21,11 @@
             <Param name="newLength, The length of the copy to be returned." />
          </Overload>
       </KeyWord>       
+      <KeyWord name="arrayToClip" func="yes">
+         <Overload retVal="{void}" descr="Sends the contents of an array of bytes to the clipboard.">
+            <Param name="a, The array to copy to clipboard." />
+         </Overload>
+      </KeyWord>      
       <KeyWord name="arrayToString" func="yes">
          <Overload retVal="{String}" descr="This method returns a string representation of the contents of the
 	 specified array.">
@@ -263,6 +268,11 @@
             <Param name="URL, The URL to query, including the get parameters." />
          </Overload>
       </KeyWord>
+      <KeyWord name="getEnv" func="yes">
+         <Overload retVal="{String}" descr="Retrieves an environment variable." >
+         	<Param name="var, Name of the environment variable to get such as JAVA_HOME or PATH." />
+          </Overload>
+      </KeyWord>      
       <KeyWord name="getSpeed" func="yes">
          <Overload retVal="{double}" descr="Get the current speed. The speed controls how quickly mouse and keyboard actions happen. The default speed is .95 (95%). A speed of 1.00 (100%) makes mouse and keyboard actions instant." />
       </KeyWord>
