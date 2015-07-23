@@ -1,350 +1,383 @@
-<?xml version="1.0" encoding="Windows-1252" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <NotepadPlus>
-	<AutoComplete>
-		<Environment ignoreCase="no" startFunc="(" stopFunc=")" paramSeparator="," terminal=";" />
-		<KeyWord name="struct" />
-		<KeyWord name="func" />
-		<KeyWord name="toString" func="yes" >
-           <Overload retVal="{String}" descr="Convert to a String" >
-			    <Param name="obj, Object to convert to String" />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="toInt" func="yes" >
-           <Overload retVal="{int}" descr="Convert to an int" >
-			    <Param name="obj, Object to convert to int" />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="toFloat" func="yes" >
-           <Overload retVal="{float}" descr="Convert to a float." >
-			    <Param name="obj, Object to convert to float" />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="toDouble" func="yes" >
-           <Overload retVal="{double}" descr="Convert to a double." >
-			    <Param name="obj, Object to convert to double" />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="toChar"  func="yes" >
-           <Overload retVal="{char}" descr="Convert to a char." >
-			    <Param name="obj, Object to convert to chart" />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="sleep"  func="yes" >
-           <Overload retVal="{void}" descr="Delay execution for an amount of milliseconds (1000 milliseconds = 1 second). " >
-			    <Param name="milliseconds, Time to delay; must be between 0 and 60,000ms. Only takes integer values." />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="setSpeed" func="yes" >
-           <Overload retVal="{void}" descr="Set the current speed. The speed controls how quickly mouse and keyboard actions happen. The default speed is .95 (95%). A speed of 1.00 (100%) makes mouse and keyboard actions instant. " >
-			    <Param name="spd, 	The new speed as a double. This value must be between 0.00 and 1.00, if it isn't no action will be taken. A speed of 1.00 will make mouse and keyboard actions instant." />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="send" func="yes" >
-           <Overload retVal="{void}" descr="Simulate keyboard input by 'typing' the contents of str. Special keys can also be typed. The speed at which this typing occurs can be set with setSpeed. " >
-			    <Param name="str, The string to type, one letter (or special key) at a time." />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="screenShot"  func="yes" >
-           <Overload retVal="{void}" descr="Take a screenshot and save to a PNG file. " >
-			    <Param name="fileName 	Filename to save the PNG screenshot to." />
-			   <Param name="x1, X value of top left coordinate." />
-			   <Param name="y1, Y value of top left coordinate." />
-			   <Param name="x2, X value of bottom right coordinate." />
-			   <Param name="y2, Y value of bottom right coordinate." />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="rmDir"  func="yes" >
-           <Overload retVal="{void}" descr="Delete a directory and its contents. " >
-			    <Param name="dirPath, Path of the directory to delete." />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="rgbGetInt " func="yes" >
-           <Overload retVal="{int}" descr="Get an integer representation of a color based on R,G,B values. " >
-			   <Param name="r, r value." />
-			   <Param name="g, g value." />
-			   <Param name="b,	b value." />
-           </Overload>		
-		</KeyWord>				         
-		<KeyWord name="print" func="yes" >
-           <Overload retVal="{void}" descr="Print to the terminal. " >
-			   <Param name="obj, Object to print" />
-           </Overload>		
-		</KeyWord>				            
-		<KeyWord name="pixelSearch"  func="yes" >
-           <Overload retVal="{int[]}" descr="Search for the coordinates of a pixel of a certain color within an area. This will return the coordinates of the first pixel found within the area that matches the search color. " >
-			   <Param name="colorInt, Integer representation of the color to search for." />
-			   <Param name="x1, X value of top left coordinate." />
-			   <Param name="y1, Y value of top left coordinate." />
-			   <Param name="x2, X value of bottom right coordinate." />
-			   <Param name="y2, Y value of bottom right coordinate." />
-			   <Param name="speed, A value of 1-5 to describe how fast to search. A speed of 2 searches twice as fast as speed 1 except it only checks every other pixel, which is fine if the color you're trying to find is more than two pixels wide." />			   
-           </Overload>		
-		</KeyWord>				            
-		<KeyWord name="pixelGetColor" func="yes" >
-           <Overload retVal="{int}" descr="Get the color of a certain pixel as an integer. " >
-			   <Param name="x,	X coordinate of pixel." />
-			   <Param name="y , Y coordinate of pixel." />
-           </Overload>		
-		</KeyWord>				            
-		<KeyWord name="optionsBox"  func="yes" >
-           <Overload retVal="{int}" descr="Display a message box with custom button options. " >
-			   <Param name="text, Text to display as a prompt." />
-			    <Param name="title, Title of the dialog box." />
-				<Param name="buttons, String array of button names to be available." />
-				<Param name="defaultButton 	The default button to be selected when 'Enter' is pressed. defaultButton should be the text of the desired default button." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="open" func="yes" >
-           <Overload retVal="{boolean}" descr="Open a file or URL in the default program. (This will be the default browser if it's a URL.) " >
-			   <Param name="path,	The URL or file to open. URLs must begin with http:// or https://" />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="mouseUp" func="yes" >
-           <Overload retVal="{void}" descr="Release a pressed mouse button. " >
-			   <Param name="button,The mouse button to simulate. This value must be either 'left', 'right', or 'middle'." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="mouseScrollUp" func="yes" >
-           <Overload retVal="{void}" descr="Scroll the mouse wheel up once." />
-		</KeyWord>		
-		<KeyWord name="mouseScrollDown" func="yes" >
-           <Overload retVal="{void}" descr="Scroll the mouse wheel down once." />
-		</KeyWord>		
-		<KeyWord name="mouseMove" func="yes" >
-           <Overload retVal="{void}" descr="Move the mouse cursor to a certain position. The speed of the mouse movement can be set with setSpeed." >
-			   <Param name="xFinal, The X value of the coordinate to move the mouse to." />
-			   <Param name="yFinal, The Y value of the coordinate to move the mouse to." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="mouseDown" func="yes" >
-           <Overload retVal="{void}" descr="Press down a mouse button. If mouseUp is not called the mouse will be stuck down. " >
-			   <Param name="button, The mouse button to simulate. This value must be either 'left', 'right', or 'middle'" />
-			   <Param name="x, The X value of the coordinate that will be clicked on." />
-			   <Param name="y, The Y value of the coordinate that willl be clicked on." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="mouseClickDrag" func="yes" >
-           <Overload retVal="{void}" descr="Click and drag the mouse from one coordinate to another. " >
-			   <Param name="button,The mouse button to simulate. This value must be either 'left', 'right', or 'middle'." />
-			   <Param name="x1, First coordinate X value." />
-			   <Param name="y1, First coordinate Y value." />
-			   <Param name="x2, Second coordinate X value." />
-			   <Param name="y2, Second coordinate Y value." />			   
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="mouseClick" func="yes" >
-           <Overload retVal="{void}" descr="Perform a mouse click. " >
-			   <Param name="button, The mouse button to simulate. This value must be either 'left', 'right', or 'middle'." />
-			   <Param name="x, The X value of the coordinate that will be clicked on." />
-			   <Param name="y, The Y value of the coordinate that willl be clicked on." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="mkDir" func="yes" >
-           <Overload retVal="{void}" descr="Create a directory. " >
-			   <Param name="dirName, The name of the directory to create. If the directory already exists no action will be taken." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="keyUp" func="yes" >
-           <Overload retVal="{void}" descr="Release a key that has been held down. Special keys can also be used here. " >
-			   <Param name="s, The single key that will be released. If more than one key is specified only the first will be released." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="keyPress" func="yes" >
-           <Overload retVal="{void}" descr="Simulate the press and release of a single key. Special keys can be used here. " >
-			   <Param name="s, The single key to press or release. If more than one key is specified only one key will be pressed." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="keyDown" func="yes" >
-           <Overload retVal="{void}" descr="Hold down a key until keyUp is called on the same key. If keyUp is not called the key will become 'stuck.' Special keys can also be used here. " >
-			   <Param name="str, The key that will be held down. If there are multiple letters or keys specified only the first will be held down." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="keyCombo" func="yes" >
-           <Overload retVal="{void}" descr="Send a key combination such as Ctrl + Alt + Delete. The keys must be passed in as a string array. " >
-			   <Param name="keys, The key combination to be executed as a String array. The keys in this array must be in order and may contain special keys. The array can be of any size." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="join" func="yes" >
-           <Overload retVal="{String}" descr="Join a string array into a string with a delimeter. " >
-			   <Param name="joinString, The delimeter with which to join the string array." />
-			   <Param name="strArray, The array to join." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="isFlagged" func="yes" >
-           <Overload retVal="{boolean}" descr="Check if a flag is present within the command line arguments. " >
-			   <Param name="flags, The flag(s) to check for, separate possible values with a pipe | For instance -h|--help could match either one." />
-			   <Param name="fPath, Path to evaluate." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="isFile"  func="yes" >
-           <Overload retVal="{boolean}" descr="Returns true for a file but not for a directory (or a non-existent file). " >
-			   <Param name="fPath, Path to evaluate." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="isDirectory" func="yes" >
-           <Overload retVal="{boolean}" descr="Check if a path is a directory. " >
-			   <Param name="fPath, Path to evaluate." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="intGetRandom"  func="yes" >
-           <Overload retVal="{int}" descr="Get a random integer between two inclusive values. " >
-			   <Param name="min, The minimum integer value to be returned (inclusive)." />
-			   <Param name="max,	The minimum integer value to be returned (inclusive)." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="intGetRGB" func="yes" >
-           <Overload retVal="{int[]}" descr="Get the RGB values of an integer color value. " >
-			   <Param name="i, The integer value of the color." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="inputPassword"  func="yes" >
-           <Overload retVal="{String}" descr="Get a password from the user. Displays a dialog box where the input is masked. " >
-			   <Param name="text, Text to be displayed in the dialog box." />
-			    <Param name="title, Title of the dialog box." />
-				<Param name="okay, [optional] text of the okay button, eg. okay, submit, go, login, etc." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="inputList" func="yes" >
-           <Overload retVal="{String}" descr="Show a dialog allowing the user to choose from a drop-down list of items. " >
-			   <Param name="text, Text to be displayed in the dialog box." />
-			    <Param name="title, Title of the dialog box." />
-				<Param name="choices, The options in the drop-down as a string array." />
-				<Param name="default, [optional] option in the Choices array." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="inputBox" func="yes" >
-           <Overload retVal="{String}" descr="Display an input dialog box to the user. " >
-			   <Param name="text, Text to be displayed in the dialog box." />
-			    <Param name="title, Title of the dialog box." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="input" func="yes" >
-           <Overload retVal="{String}" descr="Get user input from the console. " >
-			   <Param name="prompt, The prompt to display to the user." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="httpPost"  func="yes" >
-           <Overload retVal="{String}" descr="Send a HTTP POST request to a given URL with the specified parameters. " >
-			   <Param name="postUrl, URL to send the post request to." />
-			   <Param name="parameters, Post parameters to send to URL. Parameters must be defined in a two dimesional array like [ [key, value], [key, value], [key, value] ]." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="httpGet" func="yes" >
-           <Overload retVal="{String}" descr="Send a HTTP GET request to a URL. " >
-			   <Param name="URL, The URL to query, including the get parameters." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="getSpeed" func="yes" >
-           <Overload retVal="{double}" descr="Get the current speed. The speed controls how quickly mouse and keyboard actions happen. The default speed is .95 (95%). A speed of 1.00 (100%) makes mouse and keyboard actions instant." />
-		</KeyWord>		
-		<KeyWord name="getPage" func="yes" >
-           <Overload retVal="{String}" descr="Get the source of a web page as HTML." >
-			   <Param name="URL, The page to fetch." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="getNanoTime" func="yes" >
-           <Overload retVal="{long}" descr="Gets the current value from the most precise system timer on a computer, in nanoseconds. It returns nanoseconds since some fixed but arbitrary time. This fixed time could even be in the future, resulting in a negative value. getNanoTime should be used to measure the time between events, not as a wall clock.
-There are 1,000,000,000 nanoseconds in a second, and 1,000,000 nanoseconds in a millisecond." />
-		</KeyWord>		
-		<KeyWord name="getMilliTime" func="yes" >
-           <Overload retVal="{long}" descr="Gets the current time in milliseconds. There are 1000 milliseconds in 1 second, so divide by 1000 to find seconds." />
-		</KeyWord>		
-		<KeyWord name="getFlaggedArg" func="yes" >
-           <Overload retVal="{String}" descr="Get the value of a flagged argument. So if the program is executed like java program -v --file aFile.txt -o outFile.txt getFlaggedArg(args, '-f|--file') would return aFile.txt. " >
-			   <Param name="args, The String[] args from the main function. Pass them in by just saying args." />
-			   <Param name="flags, The flags to get values from, separated by | like -f|--file." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="getDateTime" func="yes" >
-           <Overload retVal="{String}" descr="Get the system date and time in yyyy/MM/dd HH:mm:ss format." />
-		</KeyWord>		
-		<KeyWord name="fileWrite" func="yes" >
-           <Overload retVal="{String}" descr="Write data to a file -- this will overwrite the file. If the file does not exist it will be created. " >
-			   <Param name="fPath, Path of the file to write to." />
-			   <Param name="data, Data to write to the file as a string." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileRead" func="yes" >
-           <Overload retVal="{String}" descr="Read the contents of a file to a string. " >
-			   <Param name="fPath, Path of the file to read." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileList"  func="yes" >
-           <Overload retVal="{String[]}" descr="Get a list of file names in a directory as an array. " >
-			   <Param name="dir, Directory to list files from." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileGetPath"  func="yes" >
-           <Overload retVal="{String}" descr="Get the full file path of a specific file or directory. " >
-			   <Param name="fPath, Path of the file." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileGetName" func="yes" >
-           <Overload retVal="{String}" descr="Get the base name of a file, including its extension. " >
-			   <Param name="fPath, Path of the file." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileExists"  func="yes" >
-           <Overload retVal="{boolean}" descr="Check if a file or directory exists. " >
-			   <Param name="fPath, Path of the file or directory to check." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileDelete"  func="yes" >
-           <Overload retVal="{void}" descr="Delete a file. This will not work on a directory. " >
-			   <Param name="fPath, Path of the file to delete." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileCreate" func="yes" >
-           <Overload retVal="{void}" descr="Create a file. Similar to the unix touch command. " >
-			   <Param name="fPath, Path of file to be created." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="fileAppend" func="yes" >
-           <Overload retVal="{boolean}" descr="Append data to a file. If the file does not exist it will be created. " >
-			   <Param name="fPath, The path of the file to which we are appending data." />
-			   <Param name="data, The data to be appended to the file." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="exec"  func="yes" >
-           <Overload retVal="{String}" descr="Execute a shell command and return the output. This will not display a visible process and it will wait for the command to finish before continuing. On Windows systems (the os can be checked with the {@link OS_SYSTEM} constant) the command string must be of the format 'cmd /c command'. " >
-			   <Param name="cmd, The command to execute." />
-           </Overload>		
-		</KeyWord>		
-		<KeyWord name="cursorGetPos" func="yes" >
-           <Overload retVal="{int[]}" descr="Get the current position of the mouse cursor in an integer array." />
-		</KeyWord>		
-		<KeyWord name="clipboardPut" func="yes" >
-           <Overload retVal="{void}" descr="Put a string in the system clipboard." >
-				<Param name="s, String data to put in the clip board." />
-			</Overload>
-		</KeyWord>		
-		<KeyWord name="clipboardGet" func="yes" >
-           <Overload retVal="{String}" descr="Get the contents of the clip board." />
-		</KeyWord>		
-		<KeyWord name="msgBox" func="yes" >
-           <Overload retVal="{void}" descr="Displays a simple message box with optional timeout." >
-               <Param name="message, The text of the message box" />
-			   <Param name="timeout, [optional] Timeout" />
-           </Overload>
-		 </KeyWord>
-		<KeyWord name="WORKING_DIR" />
-		<KeyWord name="USER_NAME" />
-		<KeyWord name="TEMP_DIR" />
-		<KeyWord name="USER_HOME_DIR" />
-		<KeyWord name="SYSTEM_OS" />
-		<KeyWord name="SCREEN_WIDTH" />
-		<KeyWord name="SCREEN_HEIGHT" />
-		<KeyWord name="FILE_SEP" />		
-		<KeyWord name="global" />
-		<KeyWord name="short" />
-		<KeyWord name="long" />
-		<KeyWord name="interface" />
-		<KeyWord name="int" />
-		<KeyWord name="float" />
-		<KeyWord name="class" />
-		<KeyWord name="char" />
-		<KeyWord name="byte" />
-		<KeyWord name="double" />			
-		<KeyWord name="boolean" />
-	</AutoComplete>
+   <AutoComplete>
+      <Environment ignoreCase="no" startFunc="(" stopFunc=")" paramSeparator="," terminal=";" />
+      <KeyWord name="struct" />
+      <KeyWord name="func" />
+       <KeyWord name="arrayAsList" func="yes">
+         <Overload retVal="{List(String)}" descr="Returns a fixed-size list backed by the specified Array.">
+            <Param name="array, This is the Array of strings by which the list will be backed." />
+         </Overload>
+      </KeyWord> 
+       <KeyWord name="arrayBinarySearch" func="yes">
+         <Overload retVal="{int}" descr="This method searches the specified array for the specified value using the binary search algorithm.">
+            <Param name="a, This is the Array to be searched." />
+            <Param name="key, This is the value to be searched for." />
+         </Overload>
+      </KeyWord>
+        <KeyWord name="arrayCopyOf" func="yes">
+         <Overload retVal="{Object[]}" descr="This method copies the specified Array, truncating or padding with false (if necessary) so the copy has the specified length.">
+            <Param name="a, The Array to be copied." />
+            <Param name="newLength, The length of the copy to be returned." />
+         </Overload>
+      </KeyWord>       
+      <KeyWord name="arrayToString" func="yes">
+         <Overload retVal="{String}" descr="This method returns a string representation of the contents of the
+	 specified array.">
+            <Param name="a, The array whose string representation to return." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="arrayEquals" func="yes">
+         <Overload retVal="{boolean}" descr="This method returns true if the two specified arrays are equal to one another.">
+            <Param name="a, The array to be tested for equality." />
+            <Param name="a2, The other array to be tested for equality." />
+         </Overload>
+      </KeyWord>                                     
+      <KeyWord name="toString" func="yes">
+         <Overload retVal="{String}" descr="Convert to a String">
+            <Param name="obj, Object to convert to String" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="toInt" func="yes">
+         <Overload retVal="{int}" descr="Convert to an int">
+            <Param name="obj, Object to convert to int" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="toFloat" func="yes">
+         <Overload retVal="{float}" descr="Convert to a float.">
+            <Param name="obj, Object to convert to float" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="toDouble" func="yes">
+         <Overload retVal="{double}" descr="Convert to a double.">
+            <Param name="obj, Object to convert to double" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="toChar" func="yes">
+         <Overload retVal="{char}" descr="Convert to a char.">
+            <Param name="obj, Object to convert to chart" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="sleep" func="yes">
+         <Overload retVal="{void}" descr="Delay execution for an amount of milliseconds (1000 milliseconds = 1 second). ">
+            <Param name="milliseconds, Time to delay; must be between 0 and 60,000ms. Only takes integer values." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="setSpeed" func="yes">
+         <Overload retVal="{void}" descr="Set the current speed. The speed controls how quickly mouse and keyboard actions happen. The default speed is .95 (95%). A speed of 1.00 (100%) makes mouse and keyboard actions instant. ">
+            <Param name="spd,  The new speed as a double. This value must be between 0.00 and 1.00, if it isn't no action will be taken. A speed of 1.00 will make mouse and keyboard actions instant." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="send" func="yes">
+         <Overload retVal="{void}" descr="Simulate keyboard input by 'typing' the contents of str. Special keys can also be typed. The speed at which this typing occurs can be set with setSpeed. ">
+            <Param name="str, The string to type, one letter (or special key) at a time." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="screenShot" func="yes">
+         <Overload retVal="{void}" descr="Take a screenshot and save to a PNG file. ">
+            <Param name="fileName  Filename to save the PNG screenshot to." />
+            <Param name="x1, X value of top left coordinate." />
+            <Param name="y1, Y value of top left coordinate." />
+            <Param name="x2, X value of bottom right coordinate." />
+            <Param name="y2, Y value of bottom right coordinate." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="rmDir" func="yes">
+         <Overload retVal="{void}" descr="Delete a directory and its contents. ">
+            <Param name="dirPath, Path of the directory to delete." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="rgbGetInt " func="yes">
+         <Overload retVal="{int}" descr="Get an integer representation of a color based on R,G,B values. ">
+            <Param name="r, r value." />
+            <Param name="g, g value." />
+            <Param name="b, b value." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="print" func="yes">
+         <Overload retVal="{void}" descr="Print to the terminal. ">
+            <Param name="obj, Object to print" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="pixelSearch" func="yes">
+         <Overload retVal="{int[]}" descr="Search for the coordinates of a pixel of a certain color within an area. This will return the coordinates of the first pixel found within the area that matches the search color. ">
+            <Param name="colorInt, Integer representation of the color to search for." />
+            <Param name="x1, X value of top left coordinate." />
+            <Param name="y1, Y value of top left coordinate." />
+            <Param name="x2, X value of bottom right coordinate." />
+            <Param name="y2, Y value of bottom right coordinate." />
+            <Param name="speed, A value of 1-5 to describe how fast to search. A speed of 2 searches twice as fast as speed 1 except it only checks every other pixel, which is fine if the color you're trying to find is more than two pixels wide." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="pixelGetColor" func="yes">
+         <Overload retVal="{int}" descr="Get the color of a certain pixel as an integer. ">
+            <Param name="x, X coordinate of pixel." />
+            <Param name="y , Y coordinate of pixel." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="optionsBox" func="yes">
+         <Overload retVal="{int}" descr="Display a message box with custom button options. ">
+            <Param name="text, Text to display as a prompt." />
+            <Param name="title, Title of the dialog box." />
+            <Param name="buttons, String array of button names to be available." />
+            <Param name="defaultButton  The default button to be selected when 'Enter' is pressed. defaultButton should be the text of the desired default button." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="open" func="yes">
+         <Overload retVal="{boolean}" descr="Open a file or URL in the default program. (This will be the default browser if it's a URL.) ">
+            <Param name="path, The URL or file to open. URLs must begin with http:// or https://" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="mouseUp" func="yes">
+         <Overload retVal="{void}" descr="Release a pressed mouse button. ">
+            <Param name="button,The mouse button to simulate. This value must be either 'left', 'right', or 'middle'." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="mouseScrollUp" func="yes">
+         <Overload retVal="{void}" descr="Scroll the mouse wheel up once." />
+      </KeyWord>
+      <KeyWord name="mouseScrollDown" func="yes">
+         <Overload retVal="{void}" descr="Scroll the mouse wheel down once." />
+      </KeyWord>
+      <KeyWord name="mouseMove" func="yes">
+         <Overload retVal="{void}" descr="Move the mouse cursor to a certain position. The speed of the mouse movement can be set with setSpeed.">
+            <Param name="xFinal, The X value of the coordinate to move the mouse to." />
+            <Param name="yFinal, The Y value of the coordinate to move the mouse to." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="mouseDown" func="yes">
+         <Overload retVal="{void}" descr="Press down a mouse button. If mouseUp is not called the mouse will be stuck down. ">
+            <Param name="button, The mouse button to simulate. This value must be either 'left', 'right', or 'middle'" />
+            <Param name="x, The X value of the coordinate that will be clicked on." />
+            <Param name="y, The Y value of the coordinate that willl be clicked on." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="mouseClickDrag" func="yes">
+         <Overload retVal="{void}" descr="Click and drag the mouse from one coordinate to another. ">
+            <Param name="button,The mouse button to simulate. This value must be either 'left', 'right', or 'middle'." />
+            <Param name="x1, First coordinate X value." />
+            <Param name="y1, First coordinate Y value." />
+            <Param name="x2, Second coordinate X value." />
+            <Param name="y2, Second coordinate Y value." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="mouseClick" func="yes">
+         <Overload retVal="{void}" descr="Perform a mouse click. ">
+            <Param name="button, The mouse button to simulate. This value must be either 'left', 'right', or 'middle'." />
+            <Param name="x, The X value of the coordinate that will be clicked on." />
+            <Param name="y, The Y value of the coordinate that willl be clicked on." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="mkDir" func="yes">
+         <Overload retVal="{void}" descr="Create a directory. ">
+            <Param name="dirName, The name of the directory to create. If the directory already exists no action will be taken." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="keyUp" func="yes">
+         <Overload retVal="{void}" descr="Release a key that has been held down. Special keys can also be used here. ">
+            <Param name="s, The single key that will be released. If more than one key is specified only the first will be released." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="keyPress" func="yes">
+         <Overload retVal="{void}" descr="Simulate the press and release of a single key. Special keys can be used here. ">
+            <Param name="s, The single key to press or release. If more than one key is specified only one key will be pressed." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="keyDown" func="yes">
+         <Overload retVal="{void}" descr="Hold down a key until keyUp is called on the same key. If keyUp is not called the key will become 'stuck.' Special keys can also be used here. ">
+            <Param name="str, The key that will be held down. If there are multiple letters or keys specified only the first will be held down." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="keyCombo" func="yes">
+         <Overload retVal="{void}" descr="Send a key combination such as Ctrl + Alt + Delete. The keys must be passed in as a string array. ">
+            <Param name="keys, The key combination to be executed as a String array. The keys in this array must be in order and may contain special keys. The array can be of any size." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="join" func="yes">
+         <Overload retVal="{String}" descr="Join a string array into a string with a delimeter. ">
+            <Param name="joinString, The delimeter with which to join the string array." />
+            <Param name="strArray, The array to join." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="isFlagged" func="yes">
+         <Overload retVal="{boolean}" descr="Check if a flag is present within the command line arguments. ">
+            <Param name="flags, The flag(s) to check for, separate possible values with a pipe | For instance -h|--help could match either one." />
+            <Param name="fPath, Path to evaluate." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="isFile" func="yes">
+         <Overload retVal="{boolean}" descr="Returns true for a file but not for a directory (or a non-existent file). ">
+            <Param name="fPath, Path to evaluate." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="isDirectory" func="yes">
+         <Overload retVal="{boolean}" descr="Check if a path is a directory. ">
+            <Param name="fPath, Path to evaluate." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="intGetRandom" func="yes">
+         <Overload retVal="{int}" descr="Get a random integer between two inclusive values. ">
+            <Param name="min, The minimum integer value to be returned (inclusive)." />
+            <Param name="max, The minimum integer value to be returned (inclusive)." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="intGetRGB" func="yes">
+         <Overload retVal="{int[]}" descr="Get the RGB values of an integer color value. ">
+            <Param name="i, The integer value of the color." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="inputPassword" func="yes">
+         <Overload retVal="{String}" descr="Get a password from the user. Displays a dialog box where the input is masked. ">
+            <Param name="text, Text to be displayed in the dialog box." />
+            <Param name="title, Title of the dialog box." />
+            <Param name="okay, [optional] text of the okay button, eg. okay, submit, go, login, etc." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="inputList" func="yes">
+         <Overload retVal="{String}" descr="Show a dialog allowing the user to choose from a drop-down list of items. ">
+            <Param name="text, Text to be displayed in the dialog box." />
+            <Param name="title, Title of the dialog box." />
+            <Param name="choices, The options in the drop-down as a string array." />
+            <Param name="default, [optional] option in the Choices array." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="inputBox" func="yes">
+         <Overload retVal="{String}" descr="Display an input dialog box to the user. ">
+            <Param name="text, Text to be displayed in the dialog box." />
+            <Param name="title, Title of the dialog box." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="input" func="yes">
+         <Overload retVal="{String}" descr="Get user input from the console. ">
+            <Param name="prompt, The prompt to display to the user." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="httpPost" func="yes">
+         <Overload retVal="{String}" descr="Send a HTTP POST request to a given URL with the specified parameters. ">
+            <Param name="postUrl, URL to send the post request to." />
+            <Param name="parameters, Post parameters to send to URL. Parameters must be defined in a two dimesional array like [ [key, value], [key, value], [key, value] ]." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="httpGet" func="yes">
+         <Overload retVal="{String}" descr="Send a HTTP GET request to a URL. ">
+            <Param name="URL, The URL to query, including the get parameters." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="getSpeed" func="yes">
+         <Overload retVal="{double}" descr="Get the current speed. The speed controls how quickly mouse and keyboard actions happen. The default speed is .95 (95%). A speed of 1.00 (100%) makes mouse and keyboard actions instant." />
+      </KeyWord>
+      <KeyWord name="getPage" func="yes">
+         <Overload retVal="{String}" descr="Get the source of a web page as HTML.">
+            <Param name="URL, The page to fetch." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="getNanoTime" func="yes">
+         <Overload retVal="{long}" descr="Gets the current value from the most precise system timer on a computer, in nanoseconds. It returns nanoseconds since some fixed but arbitrary time. This fixed time could even be in the future, resulting in a negative value. getNanoTime should be used to measure the time between events, not as a wall clock. There are 1,000,000,000 nanoseconds in a second, and 1,000,000 nanoseconds in a millisecond." />
+      </KeyWord>
+      <KeyWord name="getMilliTime" func="yes">
+         <Overload retVal="{long}" descr="Gets the current time in milliseconds. There are 1000 milliseconds in 1 second, so divide by 1000 to find seconds." />
+      </KeyWord>
+      <KeyWord name="getFlaggedArg" func="yes">
+         <Overload retVal="{String}" descr="Get the value of a flagged argument. So if the program is executed like java program -v --file aFile.txt -o outFile.txt getFlaggedArg(args, '-f|--file') would return aFile.txt. ">
+            <Param name="args, The String[] args from the main function. Pass them in by just saying args." />
+            <Param name="flags, The flags to get values from, separated by | like -f|--file." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="getDateTime" func="yes">
+         <Overload retVal="{String}" descr="Get the system date and time in yyyy/MM/dd HH:mm:ss format." />
+      </KeyWord>
+      <KeyWord name="fileWrite" func="yes">
+         <Overload retVal="{String}" descr="Write data to a file -- this will overwrite the file. If the file does not exist it will be created. ">
+            <Param name="fPath, Path of the file to write to." />
+            <Param name="data, Data to write to the file as a string." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileRead" func="yes">
+         <Overload retVal="{String}" descr="Read the contents of a file to a string. ">
+            <Param name="fPath, Path of the file to read." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileList" func="yes">
+         <Overload retVal="{String[]}" descr="Get a list of file names in a directory as an array. ">
+            <Param name="dir, Directory to list files from." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileGetPath" func="yes">
+         <Overload retVal="{String}" descr="Get the full file path of a specific file or directory. ">
+            <Param name="fPath, Path of the file." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileGetName" func="yes">
+         <Overload retVal="{String}" descr="Get the base name of a file, including its extension. ">
+            <Param name="fPath, Path of the file." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileExists" func="yes">
+         <Overload retVal="{boolean}" descr="Check if a file or directory exists. ">
+            <Param name="fPath, Path of the file or directory to check." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileDelete" func="yes">
+         <Overload retVal="{void}" descr="Delete a file. This will not work on a directory. ">
+            <Param name="fPath, Path of the file to delete." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileCreate" func="yes">
+         <Overload retVal="{void}" descr="Create a file. Similar to the unix touch command. ">
+            <Param name="fPath, Path of file to be created." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="fileAppend" func="yes">
+         <Overload retVal="{boolean}" descr="Append data to a file. If the file does not exist it will be created. ">
+            <Param name="fPath, The path of the file to which we are appending data." />
+            <Param name="data, The data to be appended to the file." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="exec" func="yes">
+         <Overload retVal="{String}" descr="Execute a shell command and return the output. This will not display a visible process and it will wait for the command to finish before continuing. On Windows systems (the os can be checked with the {@link OS_SYSTEM} constant) the command string must be of the format 'cmd /c command'. ">
+            <Param name="cmd, The command to execute." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="exit" func="yes">
+         <Overload retVal="{void}" descr="Terminates the currently running Java Virtual Machine. The argument serves as a status code.">
+             <Param name="code, [Optional] Integer that sets the script's return code." />
+         </Overload>
+      </KeyWord>      
+      <KeyWord name="cursorGetPos" func="yes">
+         <Overload retVal="{int[]}" descr="Get the current position of the mouse cursor in an integer array." />
+      </KeyWord>
+      <KeyWord name="clipboardPut" func="yes">
+         <Overload retVal="{void}" descr="Put a string in the system clipboard.">
+            <Param name="s, String data to put in the clip board." />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="clipboardGet" func="yes">
+         <Overload retVal="{String}" descr="Get the contents of the clip board." />
+      </KeyWord>
+      <KeyWord name="msgBox" func="yes">
+         <Overload retVal="{void}" descr="Displays a simple message box with optional timeout.">
+            <Param name="message, The text of the message box" />
+            <Param name="timeout, [optional] Timeout" />
+         </Overload>
+      </KeyWord>
+      <KeyWord name="WORKING_DIR" />
+      <KeyWord name="USER_NAME" />
+      <KeyWord name="TEMP_DIR" />
+      <KeyWord name="USER_HOME_DIR" />
+      <KeyWord name="SYSTEM_OS" />
+      <KeyWord name="SCREEN_WIDTH" />
+      <KeyWord name="SCREEN_HEIGHT" />
+      <KeyWord name="FILE_SEP" />
+      <KeyWord name="global" />
+      <KeyWord name="short" />
+      <KeyWord name="long" />
+      <KeyWord name="interface" />
+      <KeyWord name="int" />
+      <KeyWord name="float" />
+      <KeyWord name="class" />
+      <KeyWord name="char" />
+      <KeyWord name="byte" />
+      <KeyWord name="double" />
+      <KeyWord name="boolean" />
+   </AutoComplete>
 </NotepadPlus>
