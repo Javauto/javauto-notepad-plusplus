@@ -1,6 +1,6 @@
 
 script: 
- - "/usr/bin/xmllint $REPOSITORY_DIR/userDefineLang_Javauto.xml"
- - "/usr/bin/xmllint $REPOSITORY_DIR/javauto.xml"
+ - "/usr/bin/xmllint /home/travis/build/Javauto/javauto-notepad-plusplus/userDefineLang_Javauto.xml"
+ - "/usr/bin/xmllint /home/travis/build/Javauto/javauto-notepad-plusplus/javauto.xml"
  
 sudo: false
