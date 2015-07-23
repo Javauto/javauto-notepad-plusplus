@@ -2,6 +2,8 @@
 
 Syntax highlighting and auto completion for [Javauto](http://javauto.org/) files in [Notepad++](https://notepad-plus-plus.org/) 
 
+[![Build Status](https://travis-ci.org/Javauto/javauto-notepad-plusplus.svg?branch=develop)](https://travis-ci.org/Javauto/javauto-notepad-plusplus)  [![Join the chat at https://gitter.im/Javauto/javauto-core](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Javauto/javauto-core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![notepad](http://htejera.ukelelestudio.com/adbutil/images/notepad.png)
 
 The color scheme is built for the default theme (white background).
