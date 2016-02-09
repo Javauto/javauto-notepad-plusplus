@@ -1,4 +1,6 @@
-# Javauto Notepad++ 
+![alt tag](https://cloud.githubusercontent.com/assets/3797402/12898899/c04d2f5c-ce8d-11e5-96ad-0d35c37a9f9a.png)
+
+## Javauto Notepad++ 
 
 Syntax highlighting and auto completion for [Javauto](http://javauto.org/) files in [Notepad++](https://notepad-plus-plus.org/) 
 
