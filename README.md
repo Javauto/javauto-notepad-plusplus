@@ -2,7 +2,7 @@
 
 ## Javauto Notepad++ 
 
-Syntax highlighting and auto completion for [Javauto](http://javauto-lang.org/) files in [Notepad++](https://notepad-plus-plus.org/) 
+Syntax highlighting and auto completion for [Javauto](http://javauto.github.io/) files in [Notepad++](https://notepad-plus-plus.org/) 
 
 ![notepad](http://htejera.ukelelestudio.com/adbutil/images/notepad.png)
 
